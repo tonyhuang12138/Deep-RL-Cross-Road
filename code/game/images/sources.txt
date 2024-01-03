@@ -1,0 +1,15 @@
+Chicken: https://sketchfab.com/3d-models/chicken-crossy-road-71ff83cf547048cf8b3b4775f9df45fb
+Car: https://www.hqturbo.com/en/
+Finish Line: https://www.shutterstock.com/image-vector/finish-line-seamless-pattern-clipart-image-1927049099
+Grass: https://www.vecteezy.com/free-photos/pixel-grass
+Lilypad: https://www.dreamstime.com/illustration/lily-pad-icon.html
+Log: https://www.clipartkey.com/view/ToJRii_log-png-clipart-tree-log-clipart-png/
+Red: https://aesthetics.fandom.com/wiki/Category:Red
+Road: https://www.etsy.com/il-en/listing/1121488685/road-elements-road-clipart-highway
+Track: https://www.vecteezy.com/free-vector/train-tracks
+Train: https://www.istockphoto.com/illustrations/freight-train
+Tree: https://www.clker.com/clipart-green-tree-21.html
+Water: https://www.mypoolrx.com/about-us
+
+
+PyTorch tutorial: https://pytorch.org/tutorials/intermediate/reinforcement_q_learning.html

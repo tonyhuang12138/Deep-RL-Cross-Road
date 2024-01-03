@@ -1,0 +1,13 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# Game
+code/game/__pycache__/
+code/game/images/*:Zone.Identifier
+
+# Report 
+report/report.aux
+report/report.log
+report/report.out
+report/report.toc
+report/report.run.xml
+report/report.bcf
