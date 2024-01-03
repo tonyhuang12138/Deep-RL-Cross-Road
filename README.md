@@ -1,0 +1,62 @@
+This archive contains all of the code used for our Reinforcement Learning final project, 
+which compares the performance of an agent playing Crossy Road with Curriculum Learning 
+to that of an agent playing the game without Curriculum Learning. Deep Q-Learning with 
+Function Approximation is used to learn each level.
+
+Authors: Randy Dang, Tony Huang, Caleb Ledi
+
+
+Dependencies:
+ - This program was developed on a Linux system (locally on Mac and on Windows Subsystem for Linux)
+ - Python3 needs to be installed 
+ - The NumPy, Pandas, Pygame, and Torch libraries need to be installed
+
+To replicate the results of this experiment:
+ - Run: `sh run_experiment.sh`
+ - If you do not have the `sh` shell environment available, run the commands in `run_experiment.sh`
+   in succession 
+
+Configuration options for `game.py`:
+ - By default, a Curriculum Learning Agent will play all levels of the game in sequence, moving on 
+   to the next level only upon "mastering" it (i.e. beat the level for five consecutive times without 
+   dying). The game will be a 20x20 grid of tiles, the agent will execute this for 5 runs.
+   To run the agent and game under these settings, simply type:
+   `python3 game.py`
+ - If *you* want to play the game (instead of having an agent learn to play), add the `--play` flag 
+   to the command line.
+ - If you want each level to be a 10x10 grid (instead of a 20x20 grid), add the `--mini` flag to the 
+   command line. This setting is necessary to replicate our experiment.
+ - If you want to stop after a certain level (e.g. only play to level 4), add the `--num_levels` flag 
+   to the command line, followed by the level number you wish to stop at.
+ - If you do not want curriculum learning, i.e. start with the most challenging level, add `--no_curriculum`
+   to the command line.
+ - Toggling the number of runs and/or the criteria for level "mastery" would require changing the `NUM_RUNS`
+   and `NUM_CONSECUTIVE_WINS` constants, respectively, both of which are in `game.py`. 
+Unless *you* are playing the game, running `game.py` will generate reward and episode length plots in 
+the `plots/` subdirectory, as well as append data on number of episodes before "mastery" to `plots/num_episodes.txt`
+
+Running `python3 plot_num_episodes.py` will result in a `plots/num_episodes.png` bar plot being generated 
+based on the results in `plots/num_episodes.txt`
+
+Acknowledgements:
+ - All images used to graphically display our Crossy Road game are taken from Google Images. Here are 
+   the original sources:
+   Chicken: https://sketchfab.com/3d-models/chicken-crossy-road-71ff83cf547048cf8b3b4775f9df45fb
+   Car: https://www.hqturbo.com/en/
+   Finish Line: https://www.shutterstock.com/image-vector/finish-line-seamless-pattern-clipart-image-1927049099
+   Grass: https://www.vecteezy.com/free-photos/pixel-grass
+   Lilypad: https://www.dreamstime.com/illustration/lily-pad-icon.html
+   Log: https://www.clipartkey.com/view/ToJRii_log-png-clipart-tree-log-clipart-png/
+   Red: https://aesthetics.fandom.com/wiki/Category:Red
+   Road: https://www.etsy.com/il-en/listing/1121488685/road-elements-road-clipart-highway
+   Track: https://www.vecteezy.com/free-vector/train-tracks
+   Train: https://www.istockphoto.com/illustrations/freight-train
+   Tree: https://www.clker.com/clipart-green-tree-21.html
+   Water: https://www.mypoolrx.com/about-us
+ - The Deep Q-Learning implementation in `dqn.py`, including Replay Memory functionality and weight updates,
+   was written with substantial help from PyTorch's tutorial on Deep Q-Learning:
+   https://pytorch.org/tutorials/intermediate/reinforcement_q_learning.html
+   Many thanks to PyTorch for the helpful resource!
+ - The implementation for generating a bar plot in `plot_num_episodes.py` was written with substantial help 
+   from matplotlib's tutorial here:  
+   https://matplotlib.org/stable/gallery/lines_bars_and_markers/bar_label_demo.html
